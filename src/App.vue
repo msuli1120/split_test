@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row container">
     <div class="col-md-6">
       <h1>App Component</h1>
       <ul>
@@ -13,12 +13,18 @@
         <p v-model="result">Total: {{ result }}</p>
       </div>
     </div>
+
+    <driver></driver>
   </div>
 </template>
 
 <script>
-export default {
+import Driver from './components/Driver.vue'
 
+export default {
+  components: {
+    'driver': Driver,
+  },
   data () {
     return {
       todos: [
